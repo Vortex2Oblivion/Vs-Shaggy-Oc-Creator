@@ -1,46 +1,46 @@
 [gd_scene load_steps=9 format=3 uid="uid://ddbj5ymm52f4s"]
 
-[ext_resource type="Texture2D" uid="uid://bnl7e6fvdf68w" path="res://assets/images/arm20001.png" id="1_kfdoh"]
-[ext_resource type="Script" path="res://scr/scripts/main.gd" id="1_w6duj"]
-[ext_resource type="Texture2D" uid="uid://dkbr8xv7ujn32" path="res://assets/images/legs 10001.png" id="1_xfmxo"]
-[ext_resource type="Texture2D" uid="uid://ba8r3ekdraggj" path="res://assets/images/Shoe.png" id="2_6lneb"]
-[ext_resource type="Texture2D" uid="uid://n4wuwd2qaapo" path="res://assets/images/arm10001.png" id="2_mkyr0"]
-[ext_resource type="Texture2D" uid="uid://4j4viihmgbxk" path="res://assets/images/torso0001.png" id="3_kt0xl"]
-[ext_resource type="Texture2D" uid="uid://c2spgvpg82q1i" path="res://assets/images/head0001.png" id="4_15pib"]
-[ext_resource type="Texture2D" uid="uid://cantpkin5yo34" path="res://assets/images/skin.png" id="5_f8i0b"]
+[ext_resource type="Script" path="res://src/scripts/main.gd" id="1_eo6ic"]
+[ext_resource type="Texture2D" uid="uid://ba8r3ekdraggj" path="res://assets/images/Shoe.png" id="2_w6tow"]
+[ext_resource type="Texture2D" uid="uid://bnl7e6fvdf68w" path="res://assets/images/arm20001.png" id="3_fmpox"]
+[ext_resource type="Texture2D" uid="uid://n4wuwd2qaapo" path="res://assets/images/arm10001.png" id="4_auewb"]
+[ext_resource type="Texture2D" uid="uid://dkbr8xv7ujn32" path="res://assets/images/legs 10001.png" id="5_l71gw"]
+[ext_resource type="Texture2D" uid="uid://cantpkin5yo34" path="res://assets/images/skin.png" id="6_cq8o8"]
+[ext_resource type="Texture2D" uid="uid://4j4viihmgbxk" path="res://assets/images/torso0001.png" id="7_rv5of"]
+[ext_resource type="Texture2D" uid="uid://c2spgvpg82q1i" path="res://assets/images/head0001.png" id="8_63p65"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(-187, 48)
-script = ExtResource("1_w6duj")
+script = ExtResource("1_eo6ic")
 
 [node name="Shoe" type="Sprite2D" parent="."]
 position = Vector2(401, 500)
-texture = ExtResource("2_6lneb")
+texture = ExtResource("2_w6tow")
 
 [node name="Arm2" type="Sprite2D" parent="."]
 position = Vector2(508.5, 277.5)
-texture = ExtResource("1_kfdoh")
+texture = ExtResource("3_fmpox")
 
 [node name="Arm1" type="Sprite2D" parent="."]
 position = Vector2(275.5, 301.5)
-texture = ExtResource("2_mkyr0")
+texture = ExtResource("4_auewb")
 
 [node name="Legs" type="Sprite2D" parent="."]
 position = Vector2(404, 501)
-texture = ExtResource("1_xfmxo")
+texture = ExtResource("5_l71gw")
 
 [node name="Underlay Thing" type="Sprite2D" parent="."]
 position = Vector2(437, 200)
 scale = Vector2(1.02533, 1.02533)
-texture = ExtResource("5_f8i0b")
+texture = ExtResource("6_cq8o8")
 
 [node name="Torso" type="Sprite2D" parent="."]
 position = Vector2(435.5, 198.5)
-texture = ExtResource("3_kt0xl")
+texture = ExtResource("7_rv5of")
 
 [node name="Head" type="Sprite2D" parent="."]
 position = Vector2(1248.5, 482.5)
-texture = ExtResource("4_15pib")
+texture = ExtResource("8_63p65")
 
 [node name="PantsG" type="HSlider" parent="."]
 offset_left = 551.0
