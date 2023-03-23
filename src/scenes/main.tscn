@@ -87,6 +87,13 @@ offset_bottom = 149.0
 max_value = 255.0
 value = 53.0
 
+[node name="Head Type" type="RichTextLabel" parent="."]
+offset_left = 636.0
+offset_top = 153.0
+offset_right = 734.0
+offset_bottom = 193.0
+text = "Head Type"
+
 [node name="Pants Colors" type="RichTextLabel" parent="."]
 offset_left = 636.0
 offset_top = 67.0
