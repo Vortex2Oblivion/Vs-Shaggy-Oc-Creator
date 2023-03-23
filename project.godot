@@ -1,0 +1,25 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Vs Shaggy Oc Creator"
+config/description="Create OCs for the VS Shaggy FNF mod with this easy tool!"
+run/main_scene="res://scr/scenes/main.tscn"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://project/shaggy-icons.png"
+config/macos_native_icon="res://project/shaggy-icons1024.icns"
+config/windows_native_icon="res://project/shaggy-icons.ico"
+
+[display]
+
+window/size/viewport_width=650
+window/size/viewport_height=750
+window/size/transparent=true
