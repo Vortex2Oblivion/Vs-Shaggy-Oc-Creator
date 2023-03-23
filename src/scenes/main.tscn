@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddbj5ymm52f4s"]
+[gd_scene load_steps=11 format=3 uid="uid://ddbj5ymm52f4s"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_eo6ic"]
 [ext_resource type="Texture2D" uid="uid://ba8r3ekdraggj" path="res://assets/images/Shoe.png" id="2_w6tow"]
@@ -8,6 +8,26 @@
 [ext_resource type="Texture2D" uid="uid://cantpkin5yo34" path="res://assets/images/skin.png" id="6_cq8o8"]
 [ext_resource type="Texture2D" uid="uid://4j4viihmgbxk" path="res://assets/images/torso0001.png" id="7_rv5of"]
 [ext_resource type="Texture2D" uid="uid://c2spgvpg82q1i" path="res://assets/images/head0001.png" id="8_63p65"]
+[ext_resource type="Texture2D" uid="uid://bql843e5oebyq" path="res://assets/images/red/head0001.png" id="9_nxvi8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1t4w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_63p65")
+}],
+"loop": true,
+"name": &"0",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_nxvi8")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node2D"]
 position = Vector2(-187, 48)
@@ -38,9 +58,10 @@ texture = ExtResource("6_cq8o8")
 position = Vector2(435.5, 198.5)
 texture = ExtResource("7_rv5of")
 
-[node name="Head" type="Sprite2D" parent="."]
+[node name="Head" type="AnimatedSprite2D" parent="."]
 position = Vector2(1248.5, 482.5)
-texture = ExtResource("8_63p65")
+sprite_frames = SubResource("SpriteFrames_n1t4w")
+animation = &"0"
 
 [node name="PantsG" type="HSlider" parent="."]
 offset_left = 551.0
@@ -88,6 +109,13 @@ offset_bottom = 16.0
 max_value = 255.0
 value = 51.0
 
+[node name="HeadSlider" type="HSlider" parent="."]
+offset_left = 548.0
+offset_top = 175.0
+offset_right = 803.0
+offset_bottom = 191.0
+max_value = 1.0
+
 [node name="TorsoB" type="HSlider" parent="."]
 offset_left = 552.0
 offset_top = 47.0
@@ -102,3 +130,31 @@ offset_top = -19.0
 offset_right = 734.0
 offset_bottom = 21.0
 text = "Torso Colors"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 606.0
+offset_top = 613.0
+offset_right = 773.0
+offset_bottom = 644.0
+text = "Quit"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 606.0
+offset_top = 652.0
+offset_right = 773.0
+offset_bottom = 683.0
+text = "Save OC"
+
+[node name="ScreenshotTimer" type="Timer" parent="."]
+wait_time = 0.051
+one_shot = true
+
+[node name="ResetWindowSize" type="Timer" parent="."]
+wait_time = 0.051
+one_shot = true
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="ScreenshotTimer" to="." method="_on_screenshot_timer_timeout"]
+[connection signal="timeout" from="ResetWindowSize" to="." method="_on_reset_window_size_timeout"]
