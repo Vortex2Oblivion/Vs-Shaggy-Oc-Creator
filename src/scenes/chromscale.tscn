@@ -1,8 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://d38htjeiqa4nb"]
+[gd_scene load_steps=7 format=3 uid="uid://d38htjeiqa4nb"]
 
 [ext_resource type="AudioStream" uid="uid://bgo2hnhusdba1" path="res://assets/sounds/Shaggy_chrom_audio.ogg" id="1_76j4n"]
+[ext_resource type="Script" path="res://src/scripts/chromscale.gd" id="1_m7pex"]
+[ext_resource type="Texture2D" uid="uid://plrekwmtrmlv" path="res://assets/images/bgs/bg_lemon.png" id="2_b0vsc"]
+[ext_resource type="FontFile" uid="uid://by34afjqcf2f2" path="res://assets/fonts/Friday night_PersonalUseOnly.ttf" id="2_lixq3"]
+[ext_resource type="Texture2D" uid="uid://cbxakmhv34vj0" path="res://assets/images/button/button.png" id="3_boydq"]
 
-[node name="chromscale" type="Node2D"]
+[sub_resource type="Theme" id="Theme_c04i2"]
+default_font = ExtResource("2_lixq3")
+default_font_size = 75
+
+[node name="ChromaticScale" type="Node2D"]
+script = ExtResource("1_m7pex")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(324.818, 176)
+scale = Vector2(0.301984, 0.301985)
+texture = ExtResource("2_b0vsc")
 
 [node name="ChromaticScale" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_76j4n")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 216.0
+offset_right = 646.0
+offset_bottom = 331.0
+theme = SubResource("Theme_c04i2")
+text = "PLAY"
+icon = ExtResource("3_boydq")
+icon_alignment = 1
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

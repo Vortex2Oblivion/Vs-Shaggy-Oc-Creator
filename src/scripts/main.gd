@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	$"/root".size=Vector2(650,750)
 
 func _process(_delta):
 	$"Torso".modulate = Color8($"TorsoR".value as int,$"TorsoG".value as int,$"TorsoB".value as int)
