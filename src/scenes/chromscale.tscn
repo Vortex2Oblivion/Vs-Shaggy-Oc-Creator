@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d38htjeiqa4nb"]
+[gd_scene load_steps=8 format=3 uid="uid://d38htjeiqa4nb"]
 
-[ext_resource type="AudioStream" uid="uid://bgo2hnhusdba1" path="res://assets/sounds/Shaggy_chrom_audio.ogg" id="1_76j4n"]
 [ext_resource type="Script" path="res://src/scripts/chromscale.gd" id="1_m7pex"]
 [ext_resource type="Texture2D" uid="uid://plrekwmtrmlv" path="res://assets/images/bgs/bg_lemon.png" id="2_b0vsc"]
 [ext_resource type="FontFile" uid="uid://by34afjqcf2f2" path="res://assets/fonts/Friday night_PersonalUseOnly.ttf" id="2_lixq3"]
+[ext_resource type="AudioStream" uid="uid://26cpjdeehhyp" path="res://assets/sounds/Shaggy_chrom_audio.wav" id="3_72a71"]
 [ext_resource type="Texture2D" uid="uid://cbxakmhv34vj0" path="res://assets/images/button/button.png" id="3_boydq"]
+[ext_resource type="FontFile" uid="uid://4gyoafxdu541" path="res://assets/materials/font.tres" id="6_7exe8"]
 
 [sub_resource type="Theme" id="Theme_c04i2"]
 default_font = ExtResource("2_lixq3")
@@ -19,7 +20,7 @@ scale = Vector2(0.301984, 0.301985)
 texture = ExtResource("2_b0vsc")
 
 [node name="ChromaticScale" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_76j4n")
+stream = ExtResource("3_72a71")
 
 [node name="PlayButton" type="Button" parent="."]
 offset_left = 308.0
@@ -31,4 +32,30 @@ text = "PLAY"
 icon = ExtResource("3_boydq")
 icon_alignment = 1
 
+[node name="Save" type="Button" parent="."]
+offset_left = 308.0
+offset_top = 24.0
+offset_right = 646.0
+offset_bottom = 139.0
+theme = SubResource("Theme_c04i2")
+text = "SAVE"
+icon = ExtResource("3_boydq")
+icon_alignment = 1
+
+[node name="Pitch" type="HSlider" parent="."]
+offset_top = 30.0
+offset_right = 194.0
+offset_bottom = 46.0
+
+[node name="PitchTxt" type="RichTextLabel" parent="."]
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 175.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("6_7exe8")
+bbcode_enabled = true
+text = "PITCH"
+fit_content = true
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

@@ -37,6 +37,7 @@ icon = ExtResource("2_riy04")
 icon_alignment = 1
 
 [node name="Audio Editor" type="Button" parent="."]
+layout_mode = 0
 offset_left = -70.0
 offset_top = 335.0
 offset_right = 714.0

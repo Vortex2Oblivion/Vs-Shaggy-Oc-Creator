@@ -29,7 +29,7 @@ window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/SpritesheetGenerator/plugin.cfg")
+enabled=PackedStringArray("res://addons/spritesheet generator/plugin.cfg")
 
 [rendering]
 
