@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqnngkgx2k32q"]
+
+[ext_resource type="FontFile" uid="uid://by34afjqcf2f2" path="res://assets/fonts/Friday night_PersonalUseOnly.ttf" id="1_0s0vu"]
+[ext_resource type="Script" path="res://src/scripts/title.gd" id="1_jstx4"]
+[ext_resource type="FontFile" uid="uid://4gyoafxdu541" path="res://assets/materials/font.tres" id="1_qt2jp"]
+[ext_resource type="Texture2D" uid="uid://cbxakmhv34vj0" path="res://assets/images/button/button.png" id="2_riy04"]
+
+[sub_resource type="Theme" id="Theme_0cafr"]
+default_font = ExtResource("1_0s0vu")
+default_font_size = 75
+
+[node name="TitleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jstx4")
+
+[node name="TitleText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 635.0
+offset_bottom = 89.0
+theme_override_fonts/normal_font = ExtResource("1_qt2jp")
+bbcode_enabled = true
+text = "[color=dark-green][font_size=75]VS SHAGGY OC CREATOR[/font_size][/color]"
+fit_content = true
+
+[node name="TextureButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 201.0
+offset_right = 490.0
+offset_bottom = 308.0
+theme = SubResource("Theme_0cafr")
+text = "CREATE OC"
+icon = ExtResource("2_riy04")
+icon_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
