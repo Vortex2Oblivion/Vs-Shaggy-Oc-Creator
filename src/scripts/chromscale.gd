@@ -3,7 +3,7 @@ extends Node2D
 
 var playback
 
-func _process(delta):
+func _process(_delta):
 	$"ChromaticScale".pitch_scale = $"Pitch".value
 
 func _ready():
