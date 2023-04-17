@@ -46,6 +46,8 @@ icon_alignment = 1
 offset_top = 30.0
 offset_right = 194.0
 offset_bottom = 46.0
+min_value = 0.01
+value = 0.01
 
 [node name="PitchTxt" type="RichTextLabel" parent="."]
 offset_left = 7.0
