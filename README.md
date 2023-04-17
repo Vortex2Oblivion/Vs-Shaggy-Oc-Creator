@@ -4,3 +4,8 @@
 ### Vs Shaggy Oc Creator
 
 Easily create OCs for the FNF mod: Vs Shaggy with this tool!
+
+### Credits
+
+[rfiedorowicz - visualizer code](https://github.com/rfiedorowicz/godot_spectrum_analyze)
+[KoBeWi - spritesheet generator plugin](https://godotengine.org/asset-library/asset/1486)
