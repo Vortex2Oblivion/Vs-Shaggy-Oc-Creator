@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://d38htjeiqa4nb"]
+[gd_scene load_steps=2 format=3 uid="uid://d38htjeiqa4nb"]
+
+[ext_resource type="AudioStream" uid="uid://bgo2hnhusdba1" path="res://assets/sounds/Shaggy_chrom_audio.ogg" id="1_76j4n"]
 
 [node name="chromscale" type="Node2D"]
+
+[node name="ChromaticScale" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_76j4n")
