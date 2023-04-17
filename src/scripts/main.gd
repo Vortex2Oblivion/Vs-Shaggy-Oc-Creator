@@ -7,7 +7,7 @@ func _process(_delta):
 	$Head.play(str($"HeadSlider".value))
 
 func _on_quit_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://src/scenes/title_scene.tscn")
 
 func _on_button_pressed():
 	$"/root".size=Vector2(350,750)
