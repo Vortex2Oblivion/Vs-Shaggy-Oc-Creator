@@ -25,12 +25,22 @@ bbcode_enabled = true
 text = "[color=dark-green][font_size=75]VS SHAGGY OC CREATOR[/font_size][/color]"
 fit_content = true
 
+[node name="Quit" type="Button" parent="."]
+offset_left = 155.0
+offset_top = 483.0
+offset_right = 493.0
+offset_bottom = 598.0
+theme = SubResource("Theme_0cafr")
+text = "QUIT"
+icon = ExtResource("2_riy04")
+icon_alignment = 1
+
 [node name="TextureButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 160.0
+offset_left = 153.0
 offset_top = 201.0
-offset_right = 490.0
-offset_bottom = 308.0
+offset_right = 491.0
+offset_bottom = 316.0
 theme = SubResource("Theme_0cafr")
 text = "CREATE OC"
 icon = ExtResource("2_riy04")
@@ -47,5 +57,6 @@ text = "CHROMATIC SCALE GENERATOR"
 icon = ExtResource("2_riy04")
 icon_alignment = 1
 
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Audio Editor" to="." method="_on_audio_editor_pressed"]

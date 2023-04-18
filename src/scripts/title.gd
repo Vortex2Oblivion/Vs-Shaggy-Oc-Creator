@@ -6,3 +6,7 @@ func _on_texture_button_pressed():
 
 func _on_audio_editor_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/chromscale.tscn")
+
+
+func _on_quit_pressed():
+	get_tree().quit()
