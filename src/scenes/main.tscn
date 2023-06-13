@@ -161,7 +161,6 @@ wait_time = 0.051
 one_shot = true
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
-[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="ScreenshotTimer" to="." method="_on_screenshot_timer_timeout"]
 [connection signal="timeout" from="ResetWindowSize" to="." method="_on_reset_window_size_timeout"]

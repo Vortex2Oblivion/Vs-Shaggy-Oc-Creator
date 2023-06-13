@@ -1,9 +1,38 @@
-[gd_scene format=3 uid="uid://cjw3xsm2vtu0y"]
+[gd_scene load_steps=3 format=3 uid="uid://cjw3xsm2vtu0y"]
+
+[ext_resource type="FontFile" uid="uid://by34afjqcf2f2" path="res://assets/fonts/Friday night_PersonalUseOnly.ttf" id="1_pydq1"]
+
+[sub_resource type="Theme" id="Theme_u7lx5"]
+default_font = ExtResource("1_pydq1")
 
 [node name="FxList" type="ItemList"]
 offset_right = 650.0
 offset_bottom = 750.0
-item_count = 3
-item_0/text = "Amplify"
+theme = SubResource("Theme_u7lx5")
+item_count = 26
+item_0/text = "AMPLIFY"
 item_1/text = "Band Limit Fader"
 item_2/text = "Band Pass Filter"
+item_3/text = "Capture"
+item_4/text = "Chorus"
+item_5/text = "Compressor"
+item_6/text = "Delay"
+item_7/text = "Distortion"
+item_8/text = "EQ"
+item_9/text = "EQ10"
+item_10/text = "EQ21"
+item_11/text = "EQ6"
+item_12/text = "Filter"
+item_13/text = "High Pass Filter"
+item_14/text = "High Shelf Filter"
+item_15/text = "Limiter"
+item_16/text = "Low Pass Filter"
+item_17/text = "Low Shelf Filter"
+item_18/text = "Notch Filter"
+item_19/text = "Panner"
+item_20/text = "Phaser"
+item_21/text = "Pitch Shift"
+item_22/text = "Record"
+item_23/text = "Reverb"
+item_24/text = "Spectrum Analyzer"
+item_25/text = "Stereo Enhance"

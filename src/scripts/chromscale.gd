@@ -3,9 +3,6 @@ extends Node2D
 
 var playback
 
-func _process(_delta):
-	$"ChromaticScale".pitch_scale = $"Pitch".value
-
 func _ready():
 	$"/root".size=Vector2(650,350)
 
