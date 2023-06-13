@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cjw3xsm2vtu0y"]
+
+[node name="FxList" type="ItemList"]
+offset_right = 650.0
+offset_bottom = 750.0
+item_count = 3
+item_0/text = "Amplify"
+item_1/text = "Band Limit Fader"
+item_2/text = "Band Pass Filter"

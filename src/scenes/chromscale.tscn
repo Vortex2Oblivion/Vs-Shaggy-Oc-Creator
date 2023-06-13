@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d38htjeiqa4nb"]
+[gd_scene load_steps=10 format=3 uid="uid://d38htjeiqa4nb"]
 
 [ext_resource type="Script" path="res://src/scripts/chromscale.gd" id="1_m7pex"]
 [ext_resource type="Texture2D" uid="uid://plrekwmtrmlv" path="res://assets/images/bgs/bg_lemon.png" id="2_b0vsc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cbxakmhv34vj0" path="res://assets/images/button/button.png" id="3_boydq"]
 [ext_resource type="FontFile" uid="uid://4gyoafxdu541" path="res://assets/materials/font.tres" id="6_7exe8"]
 [ext_resource type="Script" path="res://addons/godot_sfxr/SfxrStreamPlayer.gd" id="7_nmmlt"]
+[ext_resource type="PackedScene" uid="uid://cjw3xsm2vtu0y" path="res://src/scenes/fx_list.tscn" id="8_7ucol"]
 
 [sub_resource type="Theme" id="Theme_c04i2"]
 default_font = ExtResource("2_lixq3")
@@ -63,6 +64,9 @@ fit_content = true
 [node name="SfxrStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_72a71")
 script = ExtResource("7_nmmlt")
+
+[node name="FxList" parent="." instance=ExtResource("8_7ucol")]
+offset_bottom = 351.0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
