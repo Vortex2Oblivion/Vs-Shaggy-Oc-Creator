@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqnngkgx2k32q"]
+[gd_scene load_steps=7 format=3 uid="uid://dqnngkgx2k32q"]
 
 [ext_resource type="FontFile" uid="uid://by34afjqcf2f2" path="res://assets/fonts/Friday night_PersonalUseOnly.ttf" id="1_0s0vu"]
 [ext_resource type="Script" path="res://src/scripts/title.gd" id="1_jstx4"]
 [ext_resource type="FontFile" uid="uid://4gyoafxdu541" path="res://assets/materials/font.tres" id="1_qt2jp"]
+[ext_resource type="Texture2D" uid="uid://plrekwmtrmlv" path="res://assets/images/bgs/bg_lemon.png" id="2_5b6x6"]
 [ext_resource type="Texture2D" uid="uid://cbxakmhv34vj0" path="res://assets/images/button/button.png" id="2_riy04"]
 
 [sub_resource type="Theme" id="Theme_0cafr"]
@@ -13,6 +14,11 @@ default_font_size = 75
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_jstx4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(553, 410)
+scale = Vector2(0.769413, 0.769413)
+texture = ExtResource("2_5b6x6")
 
 [node name="TitleText" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -26,6 +32,7 @@ text = "[color=dark-green][font_size=75]VS SHAGGY OC CREATOR[/font_size][/color]
 fit_content = true
 
 [node name="Quit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 155.0
 offset_top = 483.0
 offset_right = 493.0
@@ -48,14 +55,24 @@ icon_alignment = 1
 
 [node name="Audio Editor" type="Button" parent="."]
 layout_mode = 0
-offset_left = -70.0
+offset_left = 154.0
 offset_top = 335.0
-offset_right = 714.0
+offset_right = 492.0
 offset_bottom = 450.0
 theme = SubResource("Theme_0cafr")
-text = "CHROMATIC SCALE GENERATOR"
 icon = ExtResource("2_riy04")
 icon_alignment = 1
+
+[node name="AudioText" type="RichTextLabel" parent="Audio Editor"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 40.0
+offset_right = 326.0
+offset_bottom = 71.0
+theme_override_fonts/normal_font = ExtResource("1_qt2jp")
+bbcode_enabled = true
+text = "[font_size=30]CHROMATIC SCALE GENERATOR[/font_size]"
+fit_content = true
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
